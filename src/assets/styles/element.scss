@@ -1,0 +1,81 @@
+// table样式修改
+::v-deep .el-table,
+.el-table__expanded-cell {
+  background-color: transparent;
+}
+::v-deep .el-table--enable-row-transition .el-table__body td,
+.el-table .cell {
+  background-color: transparent;
+  border: 0;
+}
+::v-deep .el-table {
+  .el-table__header {
+    th,
+    .is-group th {
+      background-color: transparent;
+      color: #ffffff;
+      height: 45px;
+      border: none !important;
+      font-weight: bold;
+      .cell {
+        color: #fff;
+      }
+    }
+  }
+  tr {
+    background-color: transparent !important;
+    border: 0;
+    color: #fff;
+    font-size: 16px;
+    font-size: 24px;
+    .cell{
+      height: 50px;
+      line-height: 50px;
+    }
+  }
+  .success_class {
+    background: linear-gradient(
+      90deg,
+      rgba(88, 156, 235, 0.6) 0%,
+      rgba(9, 87, 175, 0.2) 100%
+    ) !important;
+    font-weight: bold;
+    color: #00ffff !important;
+  }
+  .eve {
+    background: rgba(85, 155, 236, 0.1) !important;
+  }
+
+  // 滚动条样式
+  .el-table__body-wrapper {
+    // max-height: $tableHeight;
+    overflow-y: auto;
+    // height: 100vh;
+    .el-table__empty-text {
+      color: #333;
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+
+  // 滚动条样式
+  ::-webkit-scrollbar {
+    width: 8px; // 横向滚动条
+    height: 10px; // 纵向滚动条 必写
+  }
+
+  // 滚动条的滑块
+  ::-webkit-scrollbar-thumb {
+    // background-color: #ddd;
+    background: #0957af;
+    border: 1px solid rgba(85, 193, 255, 0.4);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-track {
+    width: 10px;
+  }
+}
+::v-deep .el-table--enable-row-hover .el-table__body tr:hover > td {
+  background-color: transparent;
+}
